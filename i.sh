@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Instalar programas
-sudo pacman -S --noconfirm git go bspwm sxhkd zsh kitty vim rofi nemo htop polybar papirus-icon-theme ttf-nerd-fonts-symbols ttf-fira-code ttf-font-awesome feh redshift neofetch xclip maim pavucontrol firefox chromium libreoffice-fresh libreoffice-fresh-pt-br libreoffice-fresh-pt-br orchis-theme
+sudo pacman -S --noconfirm nvidia-dkms nvidia-utils libva libva-nvidia-driver lib32-nvidia-utils
+sudo pacman -S --noconfirm bspwm sxhkd zsh kitty vim rofi ranger polybar papirus-icon-theme feh redshift xclip maim orchis-theme picom ttf-font-awesome
 
 # Mover .config
 rm -r ~/.config
@@ -33,13 +34,7 @@ cd
 yay -S --noconfirm papirus-folders
 
 #icones, temas e fontes
-papirus-folders -C white --theme Papirus
+papirus-folders -C black --theme Papirus
 
 rm -rf ~/bspwm
 rm -rf ~/yay
-
-### Autologin ###
-#sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
-#echo "[Service]
-#ExecStart=
-#ExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin ly2 - \$TERM" | sudo tee /etc/systemd/system/getty@tty1.service.d/autologin.conf > /dev/null
