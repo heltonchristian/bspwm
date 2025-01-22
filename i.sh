@@ -2,7 +2,7 @@
 
 # Instalar programas
 sudo pacman -S --noconfirm nvidia-dkms nvidia-utils libva libva-nvidia-driver lib32-nvidia-utils
-sudo pacman -S --noconfirm bspwm sxhkd zsh kitty vim rofi ranger polybar papirus-icon-theme feh redshift xclip maim orchis-theme picom ttf-font-awesome
+sudo pacman -S --noconfirm bspwm sxhkd zsh kitty vim rofi nemo nemo-fileroller polybar papirus-icon-theme feh redshift xclip maim orchis-theme picom ttf-nerd-fonts-symbols
 
 # Mover .config
 rm -r ~/.config
