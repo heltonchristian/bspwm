@@ -6,11 +6,11 @@ super + Return
 
 # Browser
 super + F9
-    firefox
+    librewolf --profile /home/ly/.librewolf/bu8b15z3.default-default
 
 # Browser2
 super + F5
-    chromium
+    librewolf --profile /home/ly/.librewolf/q4oqy8zc.default
 
 # File manager
 super + F10
@@ -29,10 +29,6 @@ super + F12
 super + @space
   rofi -show drun -theme config.rasi  -monitor $(bspc query -M -d focused --names)
 
-# ticker
-super + Insert
-  kitty -e ticker
-
 # Make sxhkd reload its configuration files
 super + Escape
     pkill -USR1 -x sxhkd
@@ -49,10 +45,6 @@ super + Print
 # bspwm hotkeys
 # --------------------------------
 
-# Quit/restart bspwm
-super + shift + {q,r}
-    bspc {quit,wm -r}
-
 # Close and kill
 super + {_,shift + }k
     bspc node -{c,k}
@@ -61,10 +53,9 @@ super + {_,shift + }k
 # State/flags
 # ------------------------------------------
 
-# Set the window state
-super + {t,f,g}
-    bspc node -t {tiled,floating,fullscreen}
-
+#Fullscreen mode
+super + F
+bspc query -N -d focused | grep fullscreen > /dev/null && bspc window -t || bspc window -f
 
 # -------------------------------------
 # Focus/swap
@@ -83,14 +74,13 @@ super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} '^{1-9,10}'
 
 # ------------------------------
-# Resize
+# windows..
 # ------------------------------
 
-# Expand windows
-super + alt + {Left,Down,Up,Right}
-    bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+# MoveWindow
+super + Button1
+    bspc window -m
 
-# Contract windows
-super + ctrl + {Left,Down,Up,Right}
-    bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
-
+# Resize Window
+super + Button3
+    bspc window -r
