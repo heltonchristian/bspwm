@@ -41,6 +41,10 @@ super + shift + s
 super + Print
     ~/scripts/changewp.sh
 
+# Audio script
+super + Pause
+    ~/scripts/changeAudio.sh
+
 # --------------------------------
 # bspwm hotkeys
 # --------------------------------
