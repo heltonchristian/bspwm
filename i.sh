@@ -9,7 +9,7 @@ rm -r ~/.config
 mv -f .config ~/
 
 # Mover arquivos .zshrc,.xinitrc, scripts ...  para ~/
-mv -f .zshrc .xinitrc .zprofile wallpapers scripts ~/
+mv -f .zshrc .xinitrc .zprofile .vimrc wallpapers scripts ~/
 
 # Dar permissões
 chmod -R 755 ~/.config/bspwm/bspwmrc
