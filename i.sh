@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Instalar programas
-sudo pacman -S --noconfirm nvidia-dkms nvidia-utils libva libva-nvidia-driver lib32-nvidia-utils xdg-desktop-portal
+sudo pacman -S --noconfirm nvidia-dkms nvidia-utils libva libva-nvidia-driver lib32-nvidia-utils xdg-desktop-portal xdo
 sudo pacman -S --noconfirm bspwm sxhkd zsh kitty picom vim rofi nemo nemo-fileroller polybar papirus-icon-theme feh redshift xclip maim orchis-theme picom ttf-nerd-fonts-symbols remmina
 
 # Mover .config
