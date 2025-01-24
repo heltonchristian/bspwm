@@ -1,19 +1,20 @@
 syntax on
-set hlsearch       " highlight search terms
+set hlsearch      
 set incsearch
 set ignorecase
+set nu
 
 " indentation
 set smartindent
-set autoindent     " open lines at same indentation
-set expandtab      " turn tabs into tabstop spaces
-set tabstop=4      " 1 tab = 4 spaces
-set shiftwidth=4   " shift 4 spaces 
+set autoindent     
+set expandtab     
+set tabstop=4      
+set shiftwidth=4    
 
 set textwidth=1000000
 set wildmenu
-set mouse=a        " allow mouse
-set ruler          " shows cursor position
+set mouse=a        
+set ruler          
 
 set nowrap
 set t_Co=256
