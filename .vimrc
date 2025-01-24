@@ -4,7 +4,7 @@ set incsearch
 set ignorecase
 set nu
 
-" indentation
+
 set smartindent
 set autoindent     
 set expandtab     
